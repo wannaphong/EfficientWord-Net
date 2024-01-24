@@ -5,7 +5,7 @@ import pyaudio
 
 from typing import Tuple , List ,Union
 
-from eff_word_net.audio_processing import First_Iteration_Siamese, ModelRawBackend, Resnet50_Arc_loss
+from eff_word_net.audio_processing import ModelRawBackend, Resnet50_Arc_loss
 from eff_word_net import RATE
 from time import time as current_time_in_sec
 import logging
