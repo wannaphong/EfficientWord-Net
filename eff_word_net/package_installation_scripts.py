@@ -20,18 +20,9 @@ def check_install_tflite(verbose=False, upgrade=False, force=False, **kw):
         "hasn't released tflite_runtime on pypi and pypi freaks out if "
         "a url outside of pypi is included as a dependency. "
         "Once this upstream issue is resolved this message will go away.")
-    if upgrade or force:
-        # print('tflite is installed, but checking for a newer version.')
-        _install_tflite(verbose=verbose, **kw)
     try:
         import tflite_runtime
     except ImportError as e:
-        print(e, 'installing the right version for your system now...')
-        if verbose:
-            print(USER_MESSAGE)
-        _install_tflite(verbose=verbose, **kw)
-        if verbose:
-            print('.'*50)
         print('All done! Carry on.')
 
 def _install_librosa(verbose=False):
